@@ -1,0 +1,320 @@
+.navbar {
+    background-color: #a91f3f2e;
+    /* z-index: 1000;
+    top: 0;
+    overflow: visible; 
+    position: fixed; 
+    width: 100%; */
+
+}
+.navbar-brand {
+    margin-left: 30px;
+}
+ 
+.offcanvas {
+    background-color: #ffffff79;
+}
+.offcanvas-title {
+    font-weight: bold;
+    color: #a91f40;
+    text-align: center;
+}
+.whatsapp-button1,
+.whatsapp-button2 {
+    position: fixed;
+    top: var(--botones-top, 100px);
+    bottom: auto;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+    z-index: 999;
+    
+}
+.whatsapp-button1:hover,
+.whatsapp-button2:hover {
+    background-color: #1ebe5d;
+}
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+.uber-button1,
+.uber-button2 {
+    position: fixed;
+    top: calc(var(--botones-top, 100px) + 70px);
+    bottom: auto;
+    right: 20px;
+    background-color: #eee6e6;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: background-color 0.3s;
+    z-index: 999;
+}
+.uber-button2 {
+    /* background-color: transparent; */
+}
+.uber-button1:hover,
+.uber-button2:hover {
+    background-color: #6c9581;
+}
+.uber-icon1 {
+    width: 140px;
+    height: 22px;
+}
+.uber-icon2 {
+    width: 50px;
+    height: 50px;
+}
+.botones {
+    font-weight: bold;
+    color: white;
+    background-color: #a91f40;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 0 1rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.logos {
+    font-weight: bold;
+    color: white;
+    background-color: #a91f40;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    font-size: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 1rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Efectos hover y active */
+.botones:hover,
+.logos:hover {
+    transform: scale(1.1);
+    background-color: #ff4c4c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.botones:active,
+.logos:active {
+    transform: scale(0.95);
+}
+
+.botones i,
+.logos i {
+    transition: color 0.3s ease;
+}
+
+.botones:hover i,
+.logos:hover i {
+    color: #fff;
+}
+.fondo-carousel {
+    height: 700px;
+    overflow: hidden;
+}
+.fondo-carousel .carousel-inner,
+.fondo-carousel .carousel-item,
+.fondo-carousel .carousel-item img {
+    height: 100%;
+}
+.fondo-carousel .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-caption-personalizado {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeUpIn 5s ease-in-out forwards;
+    z-index: 3;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+@keyframes fadeUpIn {
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+.fondo-carousel .carousel-item {
+  position: relative;
+}
+
+.fondo-carousel .carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #0000005f;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fondo-carousel .carousel-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.bg-galeria {
+}
+.bg-ubicacion {
+    background: #a91f40;
+}
+.galeria-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 900px;
+    height: 500px;
+    animation: fadeUpInImg 4s ease-out forwards;
+}
+
+@keyframes fadeUpInImg {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.bg-ubicacion h4 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.bg-ubicacion p {
+    color: white !important;
+    text-align: center;
+    list-style: none;
+}
+.ubicacion{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow:  1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.ubicacion a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: inherit;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+/*FOOTER*/
+.footer {
+    margin-top: auto; /* Hace que el footer se quede al final */
+    background-color: #eee6e6; /* Color de fondo del footer */
+    padding-top: 0;
+    height: 30px;
+    overflow: hidden;
+
+}
+.footer .container{
+    /* padding: 0.5rem 1rem;  Espaciado interno */
+    top: 0;
+}
+
+.copyright-item {
+    font-family: Verdana;
+    color: #a91f40;
+    font-size: x-small;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.legal-item a{
+    text-decoration: none;
+    color: inherit;
+}
+.copyright-item a{
+    text-decoration: none;
+    color: inherit;
+}
+.legal-item {
+    font-family: Verdana;
+    color: #a91f40;
+    font-size: x-small;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .whatsapp-button2 {
+        display: none;
+    }
+    .uber-button2 {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .carousel-caption-personalizado {
+      bottom: 30%;
+      transform: translate(-50%, 50px);
+      font-size: 3rem;
+      animation: fadeUpIn 5s ease-in-out forwards;
+    }
+    .whatsapp-button1 {
+        display: none;
+    }
+    .whatsapp-button2 {
+        width: 60px;
+        height: 60px;
+    }
+    .uber-button1 {
+        display: none;
+    }
+    .uber-button2 {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* CARTA */
+
+.bg-menu {
+    background: #a91f3f2e;
+}
+.bg-pizzas {
+    background: #a91f3f2e;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
